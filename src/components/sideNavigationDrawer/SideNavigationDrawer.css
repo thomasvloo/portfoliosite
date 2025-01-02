@@ -1,0 +1,59 @@
+.drawerContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawerContent {
+  color: white;
+  padding: 10%; /* Scales padding based on the drawer width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: flex-start;
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+.navigationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 20%;
+  margin-right: 50%;
+  gap: 20px;
+}
+
+.navigationItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navigationItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigationItem a:hover {
+  color: aquamarine;
+}
+
+.hline {
+  height: 1px;
+  background-color: white;
+  width: 20%;
+  margin-right: 10px;
+}
+
+h3 {
+  color: aquamarine;
+}
+
+.profilePic {
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
