@@ -33,6 +33,22 @@ function SideNavigationDrawer() {
             <span>Contact</span>
           </NavLink>
         </div>
+        <div className="iconContainer">
+          <a
+            href="https://github.com/thomasvloo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../../../assets/githubicon.png" alt="GitHub" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/thomas-van-loo-a028a1213/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../../../assets/linkedinicon.png" alt="LinkedIn" />
+          </a>
+        </div>
       </div>
     </div>
   );
