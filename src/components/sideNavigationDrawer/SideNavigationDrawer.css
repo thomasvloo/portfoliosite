@@ -1,8 +1,9 @@
 .drawerContainer {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .drawerContent {
@@ -27,6 +28,7 @@
 .navigationItem {
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
   width: 100%;
 }
 
@@ -37,6 +39,7 @@
 
 .navigationItem a:hover {
   color: aquamarine;
+  transform: scale(1.5, 1);
 }
 
 .hline {

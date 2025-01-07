@@ -11,7 +11,9 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <SideNavigationDrawer />
+        <div className="sideNavigation">
+          <SideNavigationDrawer />
+        </div>
         <div className="contentContainer">
           <Routes>
             <Route path="/" element={<AboutMe />} />

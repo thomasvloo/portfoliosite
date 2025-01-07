@@ -1,16 +1,16 @@
 body {
   margin: 0;
   overflow: hidden;
+  background: linear-gradient(-45deg, #001d3d, #004da3, #001d3d, #004da3);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
 }
 
 .container {
   display: flex;
-  flex-direction: row; /* Side-by-side layout */
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  background: linear-gradient(-45deg, #001d3d, #004da3, #001d3d, #004da3);
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
 }
 
 @keyframes gradient {
@@ -24,12 +24,26 @@ body {
     background-position: 0% 50%;
   }
 }
+
+.sideNavigation {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .contentContainer {
-  width: 75%; /* 75% of the viewport width */
-  height: 100vh;
+  width: 75%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  background: none;
+  margin: 0;
+  padding: 0;
 }
