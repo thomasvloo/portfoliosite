@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./SideNavigationDrawer.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function SideNavigationDrawer() {
   return (
@@ -16,22 +16,22 @@ function SideNavigationDrawer() {
           <h3>Full Stack Engineer</h3>
         </div>
         <div className="navigationContainer">
-          <div className="navigationItem">
+          <NavLink to="/" className="navigationItem">
             <div className="hline" />
-            <Link to="/">About Me</Link>
-          </div>
-          <div className="navigationItem">
+            <span>About Me</span>
+          </NavLink>
+          <NavLink to="/education" className="navigationItem">
             <div className="hline" />
-            <Link to="/education">Education</Link>
-          </div>
-          <div className="navigationItem">
+            <span>Education</span>
+          </NavLink>
+          <NavLink to="/projects" className="navigationItem">
             <div className="hline" />
-            <Link to="/projects">Project Experience</Link>
-          </div>
-          <div className="navigationItem">
+            <span>Project Experience</span>
+          </NavLink>
+          <NavLink to="/contact" className="navigationItem">
             <div className="hline" />
-            <Link to="/contact">Contact</Link>
-          </div>
+            <span>Contact</span>
+          </NavLink>
         </div>
       </div>
     </div>
