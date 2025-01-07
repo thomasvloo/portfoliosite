@@ -1,8 +1,11 @@
 import * as React from "react";
 import "./SideNavigationDrawer.css";
-import { NavLink } from "react-router-dom";
 
-function SideNavigationDrawer() {
+interface Props {
+  activeSectionId: string;
+}
+
+function SideNavigationDrawer({ activeSectionId }: Props) {
   return (
     <div className="drawerContainer">
       <div className="drawerContent">
@@ -16,22 +19,42 @@ function SideNavigationDrawer() {
           <h3>Full Stack Engineer</h3>
         </div>
         <div className="navigationContainer">
-          <NavLink to="/" className="navigationItem">
+          <a
+            href="#aboutme"
+            className={`navigationItem ${
+              activeSectionId === "aboutme" ? "active" : ""
+            }`}
+          >
             <div className="hline" />
             <span>About Me</span>
-          </NavLink>
-          <NavLink to="/education" className="navigationItem">
+          </a>
+          <a
+            href="#education"
+            className={`navigationItem ${
+              activeSectionId === "education" ? "active" : ""
+            }`}
+          >
             <div className="hline" />
             <span>Education</span>
-          </NavLink>
-          <NavLink to="/projects" className="navigationItem">
+          </a>
+          <a
+            href="#projectexperience"
+            className={`navigationItem ${
+              activeSectionId === "projectexperience" ? "active" : ""
+            }`}
+          >
             <div className="hline" />
             <span>Project Experience</span>
-          </NavLink>
-          <NavLink to="/contact" className="navigationItem">
+          </a>
+          <a
+            href="#contact"
+            className={`navigationItem ${
+              activeSectionId === "contact" ? "active" : ""
+            }`}
+          >
             <div className="hline" />
             <span>Contact</span>
-          </NavLink>
+          </a>
         </div>
         <div className="iconContainer">
           <a

@@ -1,12 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
-  overflow: hidden;
   background: linear-gradient(-45deg, #001d3d, #004da3, #001d3d, #004da3);
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
 }
 
-.container {
+.appContainer {
   display: flex;
   flex-direction: row;
   height: 100vh;
@@ -25,25 +27,21 @@ body {
   }
 }
 
-.sideNavigation {
-  width: 25%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.scrollContainer {
+  margin-left: 25%;
+  width: 75%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.contentContainer {
-  width: 75%;
-  height: 100%;
+.fullPageSection {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   box-sizing: border-box;
-  background: none;
-  margin: 0;
-  padding: 0;
 }
