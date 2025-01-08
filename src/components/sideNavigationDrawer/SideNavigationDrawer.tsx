@@ -38,6 +38,15 @@ function SideNavigationDrawer({ activeSectionId }: Props) {
             <span>Education</span>
           </a>
           <a
+            href="#work"
+            className={`navigationItem ${
+              activeSectionId === "work" ? "active" : ""
+            }`}
+          >
+            <div className="hline" />
+            <span>Work Experience</span>
+          </a>
+          <a
             href="#projectexperience"
             className={`navigationItem ${
               activeSectionId === "projectexperience" ? "active" : ""

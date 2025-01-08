@@ -8,3 +8,12 @@ export interface EducationDetails {
   grade?: number;
   location: string;
 }
+
+export interface WorkDetails {
+  company: string;
+  position: string;
+  startYear: string;
+  endYear: string;
+  location: string;
+  description: string;
+}

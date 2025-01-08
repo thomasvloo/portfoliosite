@@ -3,6 +3,7 @@ import SideNavigationDrawer from "./components/sideNavigationDrawer/SideNavigati
 import "./App.css";
 import AboutMe from "./views/AboutMeView/AboutMeView";
 import Education from "./views/EducationView/EducationView";
+import Work from "views/WorkView/WorkView";
 import ProjectExperience from "views/ProjectExperienceView/ProjectExperienceView";
 import Contact from "views/ContactView/ContactView";
 
@@ -11,6 +12,7 @@ function App() {
 
   const aboutRef = useRef<HTMLElement | null>(null);
   const educationRef = useRef<HTMLElement | null>(null);
+  const workRef = useRef<HTMLElement | null>(null);
   const projectExperienceRef = useRef<HTMLElement | null>(null);
   const contactRef = useRef<HTMLElement | null>(null);
 
@@ -18,6 +20,7 @@ function App() {
     const sections = [
       { id: "aboutme", ref: aboutRef },
       { id: "education", ref: educationRef },
+      { id: "work", ref: workRef },
       { id: "projectexperience", ref: projectExperienceRef },
       { id: "contact", ref: contactRef },
     ];
@@ -59,6 +62,9 @@ function App() {
         </section>
         <section id="education" ref={educationRef} className="fullPageSection">
           <Education />
+        </section>
+        <section id="work" ref={workRef} className="fullPageSection">
+          <Work />
         </section>
         <section
           id="projectexperience"
