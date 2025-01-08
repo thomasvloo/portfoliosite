@@ -45,17 +45,17 @@
 }
 
 .navigationItem:hover span {
-  color: aquamarine;
+  color: #64ffda;
 }
 .navigationItem:hover .hline {
-  background-color: aquamarine;
+  background-color: #64ffda;
 }
 
 .navigationItem.active span {
-  color: aquamarine;
+  color: #64ffda;
 }
 .navigationItem.active .hline {
-  background-color: aquamarine;
+  background-color: #64ffda;
 }
 
 .hline {
@@ -66,7 +66,7 @@
 }
 
 h3 {
-  color: aquamarine;
+  color: #64ffda;
 }
 
 .profilePic {

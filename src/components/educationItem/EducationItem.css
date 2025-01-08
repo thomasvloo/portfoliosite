@@ -15,7 +15,7 @@ p {
 
 .years {
   font-size: 1.3rem;
-  color: aquamarine;
+  color: #64ffda;
   opacity: 0.8;
   width: 120px;
   white-space: nowrap;
@@ -40,7 +40,8 @@ p {
 .schoolName {
   font-size: 1.3rem;
   font-weight: bolder;
-  color: aquamarine;
+  color: #64ffda;
+  opacity: 0.8;
 }
 
 .labelValueRow {
