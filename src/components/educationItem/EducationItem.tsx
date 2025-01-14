@@ -1,6 +1,7 @@
-import React from "react";
-import "./EducationItem.css";
-import { EducationDetails } from "types/types";
+import './EducationItem.css';
+
+import React from 'react';
+import { EducationDetails } from 'types/types';
 
 interface EducationItemProps {
   education: EducationDetails;
@@ -19,42 +20,42 @@ function EducationItem({ education }: EducationItemProps) {
   } = education;
   return (
     <div className="educationItem">
-      <p className="years">
+      <p className="edu-years">
         {startYear} - {endYear}
       </p>
       <div className="schoolDetails">
         <p className="schoolName">{schoolName}</p>
         {degree && (
-          <p className="labelValueRow">
-            <span className="label">Degree:</span>
-            <span className="value">{degree}</span>
+          <p className="edu-labelValueRow">
+            <span className="edu-label">Degree:</span>
+            <span className="edu-value">{degree}</span>
           </p>
         )}
 
         {subject && (
-          <p className="labelValueRow">
-            <span className="label">Subject:</span>
-            <span className="value">{subject}</span>
+          <p className="edu-labelValueRow">
+            <span className="edu-label">Subject:</span>
+            <span className="edu-value">{subject}</span>
           </p>
         )}
 
         {thesis && (
-          <p className="labelValueRow">
-            <span className="label">Thesis:</span>
-            <span className="value">{thesis}</span>
+          <p className="edu-labelValueRow">
+            <span className="edu-label">Thesis:</span>
+            <span className="edu-value">{thesis}</span>
           </p>
         )}
 
         {grade && (
-          <p className="labelValueRow">
-            <span className="label">Grade:</span>
-            <span className="value">{grade.toFixed(1)}</span>
+          <p className="edu-labelValueRow">
+            <span className="edu-label">Grade:</span>
+            <span className="edu-value">{grade.toFixed(1)}</span>
           </p>
         )}
 
-        <p className="labelValueRow">
-          <span className="label">Location:</span>
-          <span className="value">{location}</span>
+        <p className="edu-labelValueRow">
+          <span className="edu-label">Location:</span>
+          <span className="edu-value">{location}</span>
         </p>
       </div>
     </div>

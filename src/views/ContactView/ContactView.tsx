@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-function Contact() {
+function ContactView() {
   return (
     <div className="container">
       <h1>Hi from Contact!</h1>
@@ -8,4 +8,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactView;

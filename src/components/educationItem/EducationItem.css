@@ -13,7 +13,7 @@ p {
   justify-content: flex-start;
 }
 
-.years {
+.edu-years {
   font-size: 1.3rem;
   color: #64ffda;
   opacity: 0.8;
@@ -44,18 +44,18 @@ p {
   opacity: 0.8;
 }
 
-.labelValueRow {
+.edu-labelValueRow {
   display: grid;
   grid-template-columns: 80px 1fr;
   column-gap: 8px;
   margin: 0 0 5px 0;
 }
 
-.label {
+.edu-label {
   white-space: nowrap;
   font-weight: bold;
 }
 
-.value {
+.edu-value {
   font-weight: normal;
 }

@@ -1,28 +1,33 @@
-import React, { useState, useEffect, useRef } from "react";
-import SideNavigationDrawer from "./components/sideNavigationDrawer/SideNavigationDrawer";
-import "./App.css";
-import AboutMe from "./views/AboutMeView/AboutMeView";
-import Education from "./views/EducationView/EducationView";
-import Work from "views/WorkView/WorkView";
-import ProjectExperience from "views/ProjectExperienceView/ProjectExperienceView";
-import Contact from "views/ContactView/ContactView";
+import './App.css';
+
+import React, { useEffect, useRef, useState } from 'react';
+import ContactView from 'views/ContactView/ContactView';
+import ProjectExperienceView from 'views/ProjectExperienceView/ProjectExperienceView';
+import ReferralsView from 'views/ReferralsView/ReferralsView';
+import WorkView from 'views/WorkView/WorkView';
+
+import SideNavigationDrawer from './components/sideNavigationDrawer/SideNavigationDrawer';
+import AboutMeView from './views/AboutMeView/AboutMeView';
+import EducationView from './views/EducationView/EducationView';
 
 function App() {
-  const [activeSectionId, setActiveSectionId] = useState<string>("");
+  const [activeSectionId, setActiveSectionId] = useState<string>('');
 
   const aboutRef = useRef<HTMLElement | null>(null);
   const educationRef = useRef<HTMLElement | null>(null);
   const workRef = useRef<HTMLElement | null>(null);
   const projectExperienceRef = useRef<HTMLElement | null>(null);
+  const referralsRef = useRef<HTMLElement | null>(null);
   const contactRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const sections = [
-      { id: "aboutme", ref: aboutRef },
-      { id: "education", ref: educationRef },
-      { id: "work", ref: workRef },
-      { id: "projectexperience", ref: projectExperienceRef },
-      { id: "contact", ref: contactRef },
+      { id: 'aboutme', ref: aboutRef },
+      { id: 'education', ref: educationRef },
+      { id: 'work', ref: workRef },
+      { id: 'projectexperience', ref: projectExperienceRef },
+      { id: 'referrals', ref: referralsRef },
+      { id: 'contact', ref: contactRef },
     ];
 
     const observer = new IntersectionObserver(
@@ -35,14 +40,14 @@ function App() {
         }
         if (mostVisible.isIntersecting) {
           setActiveSectionId(mostVisible.target.id);
-          window.history.replaceState(null, "", `#${activeSectionId}`);
+          window.history.replaceState(null, '', `#${activeSectionId}`);
         }
       },
       {
         root: null,
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 0.5,
-      }
+      },
     );
     sections.forEach(({ ref }) => {
       if (ref.current) {
@@ -58,23 +63,26 @@ function App() {
       <SideNavigationDrawer activeSectionId={activeSectionId} />
       <div className="scrollContainer">
         <section id="aboutme" ref={aboutRef} className="fullPageSection">
-          <AboutMe />
+          <AboutMeView />
         </section>
         <section id="education" ref={educationRef} className="fullPageSection">
-          <Education />
+          <EducationView />
         </section>
         <section id="work" ref={workRef} className="fullPageSection">
-          <Work />
+          <WorkView />
         </section>
         <section
           id="projectexperience"
           ref={projectExperienceRef}
           className="fullPageSection"
         >
-          <ProjectExperience />
+          <ProjectExperienceView />
+        </section>
+        <section id="referrals" ref={referralsRef} className="fullPageSection">
+          <ReferralsView />
         </section>
         <section id="contact" ref={contactRef} className="fullPageSection">
-          <Contact />
+          <ContactView />
         </section>
       </div>
     </div>

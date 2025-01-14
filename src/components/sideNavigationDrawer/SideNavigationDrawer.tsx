@@ -1,5 +1,6 @@
-import * as React from "react";
-import "./SideNavigationDrawer.css";
+import './SideNavigationDrawer.css';
+
+import * as React from 'react';
 
 interface Props {
   activeSectionId: string;
@@ -22,7 +23,7 @@ function SideNavigationDrawer({ activeSectionId }: Props) {
           <a
             href="#aboutme"
             className={`navigationItem ${
-              activeSectionId === "aboutme" ? "active" : ""
+              activeSectionId === 'aboutme' ? 'active' : ''
             }`}
           >
             <div className="hline" />
@@ -31,7 +32,7 @@ function SideNavigationDrawer({ activeSectionId }: Props) {
           <a
             href="#education"
             className={`navigationItem ${
-              activeSectionId === "education" ? "active" : ""
+              activeSectionId === 'education' ? 'active' : ''
             }`}
           >
             <div className="hline" />
@@ -40,7 +41,7 @@ function SideNavigationDrawer({ activeSectionId }: Props) {
           <a
             href="#work"
             className={`navigationItem ${
-              activeSectionId === "work" ? "active" : ""
+              activeSectionId === 'work' ? 'active' : ''
             }`}
           >
             <div className="hline" />
@@ -49,16 +50,25 @@ function SideNavigationDrawer({ activeSectionId }: Props) {
           <a
             href="#projectexperience"
             className={`navigationItem ${
-              activeSectionId === "projectexperience" ? "active" : ""
+              activeSectionId === 'projectexperience' ? 'active' : ''
             }`}
           >
             <div className="hline" />
             <span>Project Experience</span>
           </a>
           <a
+            href="#referrals"
+            className={`navigationItem ${
+              activeSectionId === 'referrals' ? 'active' : ''
+            }`}
+          >
+            <div className="hline" />
+            <span>Referrals &amp; Certifications</span>
+          </a>
+          <a
             href="#contact"
             className={`navigationItem ${
-              activeSectionId === "contact" ? "active" : ""
+              activeSectionId === 'contact' ? 'active' : ''
             }`}
           >
             <div className="hline" />

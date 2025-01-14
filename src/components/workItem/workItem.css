@@ -8,7 +8,7 @@ p {
 
 .workItem .MuiPaper-root.MuiAccordion-root {
   border-radius: 50px;
-  overflow: hidden; /* see note below */
+  overflow: hidden;
   border: 1px solid #64ffda;
 }
 
@@ -26,7 +26,7 @@ p {
 }
 
 .workItem .MuiAccordionSummary-expandIconWrapper {
-  color: #64ffda;
+  color: #64ffd4;
 }
 
 .workItem {
@@ -36,16 +36,15 @@ p {
 
 .accordionSummaryContent {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 140px 1fr;
   column-gap: 16px;
   align-items: center;
 }
 
-.years {
-  font-size: 1.3rem;
+.work-years {
+  font-size: 1.2rem;
   color: #64ffda;
-  opacity: 0.8;
-  width: 120px;
+  opacity: 0.6;
   white-space: nowrap;
   text-align: left;
   margin-right: 40px;
@@ -73,18 +72,18 @@ p {
   text-align: left;
 }
 
-.labelValueRow {
+.work-labelValueRow {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 140px 1fr;
   column-gap: 8px;
   margin: 0 0 5px 0;
 }
 
-.label {
+.work-label {
   white-space: nowrap;
   font-weight: bold;
 }
 
-.value {
+.work-value {
   font-weight: normal;
 }

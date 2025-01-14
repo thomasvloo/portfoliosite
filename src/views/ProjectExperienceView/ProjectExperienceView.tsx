@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-function ProjectExperience() {
+function ProjectExperienceView() {
   return (
     <div className="container">
       <h1>Hi from Project Experience!</h1>
@@ -8,4 +8,4 @@ function ProjectExperience() {
   );
 }
 
-export default ProjectExperience;
+export default ProjectExperienceView;
