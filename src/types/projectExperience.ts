@@ -7,7 +7,13 @@ export const projectsList = [
       Hyperledger Fabric test net and a smart contract to store the log data in JSON format
       as transactions on the blockchain. In collaboration with the University Chair, this thesis
       was published in and presented at the 2024 Business Process Management Forum, in Krakow, Poland.`,
-    technologies: ['Hyperledger Fabric', 'NodeJs', 'Express', 'Javascript'],
+    technologies: [
+      'Hyperledger Fabric',
+      'NodeJs',
+      'Express',
+      'Javascript',
+      'Git',
+    ],
   },
   {
     title: 'Eco.mio User Dashboard',
@@ -23,6 +29,7 @@ export const projectsList = [
       'PostgreSQL',
       'CSS',
       'Typescript',
+      'Git',
     ],
   },
 ];

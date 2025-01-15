@@ -8,6 +8,7 @@ const techIcons: Record<string, string> = {
   PostgreSQL: '/assets/icons/postgresIcon.png',
   CSS: '/assets/icons/cssIcon.png',
   Typescript: '/assets/icons/typescriptIcon.png',
+  Git: '/assets/icons/gitIcon.png',
 };
 
 export default techIcons;
