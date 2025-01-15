@@ -17,3 +17,9 @@ export interface WorkDetails {
   location: string;
   description: string;
 }
+
+export interface ProjectDetails {
+  title: string;
+  description: string;
+  technologies: string[];
+}
