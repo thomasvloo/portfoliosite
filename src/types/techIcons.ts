@@ -9,6 +9,10 @@ const techIcons: Record<string, string> = {
   CSS: '/assets/icons/cssIcon.png',
   Typescript: '/assets/icons/typescriptIcon.png',
   Git: '/assets/icons/gitIcon.png',
+  Python: '/assets/icons/pythonIcon.png',
+  LangChain: '/assets/icons/langchainIcon.png',
+  Ollama: '/assets/icons/ollamaIcon.png',
+  Neo4j: '/assets/icons/neo4jIcon.png',
 };
 
 export default techIcons;

@@ -32,4 +32,13 @@ export const projectsList = [
       'Git',
     ],
   },
+  {
+    title: 'Legacy Application Documentation with GenAI',
+    description: `Design and implementation of a pipeline to parse application codebases and leverage an LLM
+    instance to automatically generate technical documentation. This entailed iterating over the entire application,
+    parsing the code, determining dependencies, sending it to a privately hosted LLM instance in a carefully structured
+    prompt, using the LLM to validate and correct its output, and finally generating a markdown file with
+     the documentation.`,
+    technologies: ['Python', 'LangChain', 'Ollama', 'Git', 'Neo4j'],
+  },
 ];
