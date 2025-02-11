@@ -1,4 +1,4 @@
-import WorkItem from 'components/workItem/workItem';
+import WorkItem from 'components/WorkItem.component';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { workList } from 'types/workExperience';

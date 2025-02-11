@@ -1,6 +1,6 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
-import TechIconFlipper from 'components/techIconFlipper/techIconFlipper';
+import TechIconFlipper from 'components/TechIconFlipper.component';
 import React from 'react';
 import styled from 'styled-components';
 import { ProjectDetails } from 'types/types';

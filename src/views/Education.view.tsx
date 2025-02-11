@@ -1,4 +1,4 @@
-import EducationItem from 'components/educationItem/EducationItem';
+import EducationItem from 'components/EducationItem.component';
 import React from 'react';
 import styled from 'styled-components';
 import { educationList } from 'types/education';

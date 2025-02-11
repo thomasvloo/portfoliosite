@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import ContactView from 'views/ContactView/ContactView';
-import ProjectExperienceView from 'views/ProjectExperienceView/ProjectExperienceView';
-import ReferralsView from 'views/ReferralsView/ReferralsView';
-import WorkView from 'views/WorkView/WorkView';
+import ContactView from 'views/Contact.view';
+import ProjectExperienceView from 'views/ProjectExperience.view';
+import ReferralsView from 'views/Referrals.view';
+import WorkView from 'views/Work.view';
 
-import SideNavigationDrawer from './components/sideNavigationDrawer/SideNavigationDrawer';
+import SideNavigationDrawer from './components/SideNavigationDrawer.component';
 import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';
-import AboutMeView from './views/AboutMeView/AboutMeView';
-import EducationView from './views/EducationView/EducationView';
+import AboutMeView from './views/AboutMe.view';
+import EducationView from './views/Education.view';
 
 const AppContainer = styled.div`
   display: flex;
