@@ -1,12 +1,53 @@
-import './techIconFlipper.css';
-
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import techIcons from 'types/techIcons';
 
 interface TechIconFlipperProps {
   tech: string;
   flipInterval?: number;
 }
+
+const FlipContainer = styled.div`
+  perspective: 1000px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 20px 10px 0;
+`;
+
+const FlipInner = styled.div<{ isFlipped: boolean }>`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  transform: ${(props) => (props.isFlipped ? 'rotateY(180deg)' : 'none')};
+`;
+
+const FlipSide = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const FlipBack = styled(FlipSide)`
+  transform: rotateY(180deg);
+`;
+
+const TechIcon = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`;
 
 const TechIconFlipper: React.FC<TechIconFlipperProps> = ({
   tech,
@@ -24,20 +65,20 @@ const TechIconFlipper: React.FC<TechIconFlipperProps> = ({
   }, [flipInterval]);
 
   return (
-    <div className={`flip-container ${isFlipped ? 'flipped' : ''}`}>
-      <div className="flip-inner">
-        <div className="flip-front">
+    <FlipContainer>
+      <FlipInner isFlipped={isFlipped}>
+        <FlipSide>
           <span>{tech}</span>
-        </div>
-        <div className="flip-back">
+        </FlipSide>
+        <FlipBack>
           {iconPath ? (
-            <img src={iconPath} alt={tech} className="techIcon" />
+            <TechIcon src={iconPath} alt={tech} />
           ) : (
             <span>{tech}</span>
           )}
-        </div>
-      </div>
-    </div>
+        </FlipBack>
+      </FlipInner>
+    </FlipContainer>
   );
 };
 

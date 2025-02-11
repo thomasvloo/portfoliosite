@@ -1,8 +1,17 @@
-import './WorkView.css';
-
 import WorkItem from 'components/workItem/workItem';
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { workList } from 'types/workExperience';
+
+// Styled component replacing .workContainer
+const WorkContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+`;
 
 function WorkView() {
   const [expanded, setExpanded] = useState<number | false>(false);
@@ -13,16 +22,18 @@ function WorkView() {
       setExpanded(isExpanded ? panelId : false);
     };
 
-  const workItems = workList.map((work) => (
-    <WorkItem
-      key={work.id}
-      work={work}
-      expanded={expanded === work.id}
-      onChange={handleChange(work.id)}
-    />
-  ));
-
-  return <div className="workContainer">{workItems}</div>;
+  return (
+    <WorkContainer>
+      {workList.map((work) => (
+        <WorkItem
+          key={work.id}
+          work={work}
+          expanded={expanded === work.id}
+          onChange={handleChange(work.id)}
+        />
+      ))}
+    </WorkContainer>
+  );
 }
 
 export default WorkView;

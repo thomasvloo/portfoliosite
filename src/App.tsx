@@ -1,14 +1,41 @@
-import './App.css';
-
 import React, { useEffect, useRef, useState } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 import ContactView from 'views/ContactView/ContactView';
 import ProjectExperienceView from 'views/ProjectExperienceView/ProjectExperienceView';
 import ReferralsView from 'views/ReferralsView/ReferralsView';
 import WorkView from 'views/WorkView/WorkView';
 
 import SideNavigationDrawer from './components/sideNavigationDrawer/SideNavigationDrawer';
+import GlobalStyles from './styles/GlobalStyles';
+import { theme } from './styles/theme';
 import AboutMeView from './views/AboutMeView/AboutMeView';
 import EducationView from './views/EducationView/EducationView';
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+`;
+
+const ScrollContainer = styled.div`
+  margin-left: ${(props) => props.theme.layout.sidebarWidth};
+  width: ${(props) => props.theme.layout.contentWidth};
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+`;
+
+const FullPageSection = styled.section`
+  width: 100%;
+  height: ${(props) => props.theme.layout.sectionHeight};
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+`;
 
 function App() {
   const [activeSectionId, setActiveSectionId] = useState<string>('');
@@ -59,33 +86,32 @@ function App() {
   });
 
   return (
-    <div className="appContainer">
-      <SideNavigationDrawer activeSectionId={activeSectionId} />
-      <div className="scrollContainer">
-        <section id="aboutme" ref={aboutRef} className="fullPageSection">
-          <AboutMeView />
-        </section>
-        <section id="education" ref={educationRef} className="fullPageSection">
-          <EducationView />
-        </section>
-        <section id="work" ref={workRef} className="fullPageSection">
-          <WorkView />
-        </section>
-        <section
-          id="projectexperience"
-          ref={projectExperienceRef}
-          className="fullPageSection"
-        >
-          <ProjectExperienceView />
-        </section>
-        <section id="referrals" ref={referralsRef} className="fullPageSection">
-          <ReferralsView />
-        </section>
-        <section id="contact" ref={contactRef} className="fullPageSection">
-          <ContactView />
-        </section>
-      </div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <AppContainer>
+        <SideNavigationDrawer activeSectionId={activeSectionId} />
+        <ScrollContainer>
+          <FullPageSection id="aboutme" ref={aboutRef}>
+            <AboutMeView />
+          </FullPageSection>
+          <FullPageSection id="education" ref={educationRef}>
+            <EducationView />
+          </FullPageSection>
+          <FullPageSection id="work" ref={workRef}>
+            <WorkView />
+          </FullPageSection>
+          <FullPageSection id="projectexperience" ref={projectExperienceRef}>
+            <ProjectExperienceView />
+          </FullPageSection>
+          <FullPageSection id="referrals" ref={referralsRef}>
+            <ReferralsView />
+          </FullPageSection>
+          <FullPageSection id="contact" ref={contactRef}>
+            <ContactView />
+          </FullPageSection>
+        </ScrollContainer>
+      </AppContainer>
+    </ThemeProvider>
   );
 }
 

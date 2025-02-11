@@ -1,15 +1,40 @@
-import './AboutMeView.css';
-
 import React from 'react';
+import styled from 'styled-components';
+
+// Styled Components
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => props.theme.colors.secondary};
+`;
+
+const TextContainer = styled.div`
+  width: 67%;
+  line-height: 1.3;
+  font-size: ${(props) => props.theme.typography.fontSize.large};
+`;
+
+const ProfileImage = styled.img`
+  width: 33%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 25%;
+  object-position: center 30%;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+`;
 
 function AboutMeView() {
   return (
-    <div className="container">
-      <div className="textContainer">
-        <img
-          className="textimg"
+    <Container>
+      <TextContainer>
+        <ProfileImage
           src="../../../assets/holdingmia.jpeg"
-          alt="Thomas with his husky mia"
+          alt="Thomas with his husky Mia"
         />
         <p>
           The goal is simple: build cool applications that provide value to
@@ -17,7 +42,7 @@ function AboutMeView() {
           <br />
           It sounds simple but it actually took me a while to figure out what it
           is I actually want to do for a living. Throughout university and my
-          work life as a technical consultant I have seen a littany of different
+          work life as a technical consultant I have seen a litany of different
           projects in various fields with various technologies. There are so
           many options it can seem daunting.
           <br />
@@ -38,14 +63,14 @@ function AboutMeView() {
           world, especially warm places near the ocean, I love diving and
           snorkeling and recently started surfing. I read fiction and
           non-fiction every day (most recently I&apos;ve been absolutely
-          captivated by the sc-fi series &quot;Red Rising&quot; by Pierce
+          captivated by the sci-fi series &quot;Red Rising&quot; by Pierce
           Brown). I&apos;ve been training calisthenics and with weights for the
           better part of a decade, and more recently have added bouldering and
-          kick boxing to the mix. I also have a husky, Mia who is 13 years old
+          kickboxing to the mix. I also have a husky, Mia, who is 13 years old
           and has my whole heart.
         </p>
-      </div>
-    </div>
+      </TextContainer>
+    </Container>
   );
 }
 

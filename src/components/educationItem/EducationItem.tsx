@@ -1,13 +1,62 @@
-import './EducationItem.css';
-
 import React from 'react';
+import styled from 'styled-components';
 import { EducationDetails } from 'types/types';
 
 interface EducationItemProps {
   education: EducationDetails;
 }
 
-function EducationItem({ education }: EducationItemProps) {
+const EducationItemContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+
+const EduYears = styled.p`
+  font-size: ${(props) => props.theme.typography.fontSize.large};
+  color: ${(props) => props.theme.colors.primary};
+  opacity: 0.8;
+  width: 120px;
+  white-space: nowrap;
+  text-align: left;
+  margin-right: 40px;
+`;
+
+const SchoolDetails = styled.div`
+  color: ${(props) => props.theme.colors.secondary};
+  width: 100%;
+  font-size: ${(props) => props.theme.typography.fontSize.medium};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+`;
+
+const SchoolName = styled.p`
+  font-size: ${(props) => props.theme.typography.fontSize.large};
+  font-weight: ${(props) => props.theme.typography.fontWeight.bold};
+  color: ${(props) => props.theme.colors.primary};
+  opacity: 0.8;
+`;
+
+const EduLabelValueRow = styled.div`
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 8px;
+  margin: 0 0 5px 0;
+`;
+
+const EduLabel = styled.span`
+  white-space: nowrap;
+  font-weight: ${(props) => props.theme.typography.fontWeight.bold};
+`;
+
+const EduValue = styled.span`
+  font-weight: ${(props) => props.theme.typography.fontWeight.normal};
+`;
+
+const EducationItem: React.FC<EducationItemProps> = ({ education }) => {
   const {
     schoolName,
     startYear,
@@ -18,48 +67,49 @@ function EducationItem({ education }: EducationItemProps) {
     grade,
     location,
   } = education;
+
   return (
-    <div className="educationItem">
-      <p className="edu-years">
+    <EducationItemContainer>
+      <EduYears>
         {startYear} - {endYear}
-      </p>
-      <div className="schoolDetails">
-        <p className="schoolName">{schoolName}</p>
+      </EduYears>
+      <SchoolDetails>
+        <SchoolName>{schoolName}</SchoolName>
         {degree && (
-          <p className="edu-labelValueRow">
-            <span className="edu-label">Degree:</span>
-            <span className="edu-value">{degree}</span>
-          </p>
+          <EduLabelValueRow>
+            <EduLabel>Degree:</EduLabel>
+            <EduValue>{degree}</EduValue>
+          </EduLabelValueRow>
         )}
 
         {subject && (
-          <p className="edu-labelValueRow">
-            <span className="edu-label">Subject:</span>
-            <span className="edu-value">{subject}</span>
-          </p>
+          <EduLabelValueRow>
+            <EduLabel>Subject:</EduLabel>
+            <EduValue>{subject}</EduValue>
+          </EduLabelValueRow>
         )}
 
         {thesis && (
-          <p className="edu-labelValueRow">
-            <span className="edu-label">Thesis:</span>
-            <span className="edu-value">{thesis}</span>
-          </p>
+          <EduLabelValueRow>
+            <EduLabel>Thesis:</EduLabel>
+            <EduValue>{thesis}</EduValue>
+          </EduLabelValueRow>
         )}
 
         {grade && (
-          <p className="edu-labelValueRow">
-            <span className="edu-label">Grade:</span>
-            <span className="edu-value">{grade.toFixed(1)}</span>
-          </p>
+          <EduLabelValueRow>
+            <EduLabel>Grade:</EduLabel>
+            <EduValue>{grade.toFixed(1)}</EduValue>
+          </EduLabelValueRow>
         )}
 
-        <p className="edu-labelValueRow">
-          <span className="edu-label">Location:</span>
-          <span className="edu-value">{location}</span>
-        </p>
-      </div>
-    </div>
+        <EduLabelValueRow>
+          <EduLabel>Location:</EduLabel>
+          <EduValue>{location}</EduValue>
+        </EduLabelValueRow>
+      </SchoolDetails>
+    </EducationItemContainer>
   );
-}
+};
 
 export default EducationItem;
