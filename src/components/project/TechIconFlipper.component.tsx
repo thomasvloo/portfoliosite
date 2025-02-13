@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import techIcons from 'types/techIcons';
+import techIcons from 'constants/techIcons.constants';
 
 interface TechIconFlipperProps {
   tech: string;

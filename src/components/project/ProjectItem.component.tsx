@@ -1,9 +1,9 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
-import TechIconFlipper from 'components/TechIconFlipper.component';
+import TechIconFlipper from 'components/project/TechIconFlipper.component';
 import React from 'react';
 import styled from 'styled-components';
-import { ProjectDetails } from 'types/types';
+import { ProjectDetails } from 'types/global.types';
 
 interface ProjectItemProps {
   project: ProjectDetails;

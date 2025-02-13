@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { EducationDetails } from 'types/types';
+import { EducationDetails } from 'types/global.types';
 
 interface EducationItemProps {
   education: EducationDetails;

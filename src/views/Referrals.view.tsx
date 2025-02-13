@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { certifications } from 'types/certifications';
+import { certifications } from 'constants/certifications.constants';
 
 // Styled Components
 const ReferralCertContainer = styled.div`

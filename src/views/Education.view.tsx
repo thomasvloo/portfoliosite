@@ -1,7 +1,7 @@
-import EducationItem from 'components/EducationItem.component';
+import EducationItem from 'components/education/EducationItem.component';
 import React from 'react';
 import styled from 'styled-components';
-import { educationList } from 'types/education';
+import { educationList } from 'constants/education.constants';
 
 // Styled component replacing .educationContainer
 const EducationContainer = styled.div`

@@ -4,7 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import React from 'react';
 import styled from 'styled-components';
-import { WorkDetails } from 'types/types';
+import { WorkDetails } from 'types/global.types';
 
 interface WorkItemProps {
   work: WorkDetails;

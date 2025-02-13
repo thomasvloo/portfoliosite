@@ -1,7 +1,7 @@
-import ProjectItem from 'components/ProjectItem.component';
+import ProjectItem from 'components/project/ProjectItem.component';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { projectsList } from 'types/projectExperience';
+import { projectsList } from 'constants/projectExperience.constants';
 
 // Styled component replacing .projectsContainer
 const ProjectsContainer = styled.div`

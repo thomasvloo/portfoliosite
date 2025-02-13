@@ -1,7 +1,7 @@
-import WorkItem from 'components/WorkItem.component';
+import WorkItem from 'components/work/WorkItem.component';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { workList } from 'types/workExperience';
+import { workList } from 'constants/workExperience.constants';
 
 // Styled component replacing .workContainer
 const WorkContainer = styled.div`

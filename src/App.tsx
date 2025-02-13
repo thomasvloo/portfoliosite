@@ -5,7 +5,7 @@ import ProjectExperienceView from 'views/ProjectExperience.view';
 import ReferralsView from 'views/Referrals.view';
 import WorkView from 'views/Work.view';
 
-import SideNavigationDrawer from './components/SideNavigationDrawer.component';
+import SideNavigationDrawer from './components/navigation/SideNavigationDrawer.component';
 import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';
 import AboutMeView from './views/AboutMe.view';
